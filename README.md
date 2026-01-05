@@ -25,3 +25,10 @@ This project is a fork of [post-your-work-project](<https://github.com/udacity/p
 ## Date created
 
 **Project Created:** January 5 , 2026
+
+## Files included
+
+
+- Data files in **.csv** format
+- **bikeshare_starter.py** 
+- **README.md**
