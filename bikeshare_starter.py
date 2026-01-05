@@ -66,12 +66,18 @@ def time_stats(df):
     start_time = time.time()
 
     # display the most common month
-
-
     # display the most common day of week
-
-
     # display the most common start hour
+    if "Start Time" in df.columns:
+        s = df["Start Time"].dropna()
+        if not s.empty:
+            print("Most common month:", int(s.dt.month.mode().iat[0]))
+            print("Most common day of week:", s.dt.day_name().mode().iat[0])
+            print("Most common start hour:", int(s.dt.hour.mode().iat[0]))
+        else:
+            print("No valid start times to analyze.")
+    else:
+        print("Missing 'Start Time' column.")
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
