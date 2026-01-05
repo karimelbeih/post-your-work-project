@@ -17,13 +17,27 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-
+    while True:
+        city = input("Choose a city (chicago, new york city, washington):").strip().lower()
+        if city in CITY_DATA:
+            break
+        print("Invalid City. Try again.")
 
     # get user input for month (all, january, february, ... , june)
-
+    valid_months = {"all", "january", "february", "march", "april", "may", "june"}
+    while True:
+        month = input("Choose a month (all, january, february, march, april, may, june): ").strip().lower()
+        if month in valid_months:
+            break
+        print ("Invalid month. Try again.")
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-
+    valid_days = {"all", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"}
+    while True:
+        day = input("Choose a day (all, monday, tuesday, wednesday, thursday, friday, saturday, sunday): ").strip().lower()
+        if day in valid_days:
+            break
+        print("Invalid day. Try again.")
 
     print('-'*40)
     return city, month, day
@@ -52,12 +66,18 @@ def time_stats(df):
     start_time = time.time()
 
     # display the most common month
-
-
     # display the most common day of week
-
-
     # display the most common start hour
+    if "Start Time" in df.columns:
+        s = df["Start Time"].dropna()
+        if not s.empty:
+            print("Most common month:", int(s.dt.month.mode().iat[0]))
+            print("Most common day of week:", s.dt.day_name().mode().iat[0])
+            print("Most common start hour:", int(s.dt.hour.mode().iat[0]))
+        else:
+            print("No valid start times to analyze.")
+    else:
+        print("Missing 'Start Time' column.")
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
