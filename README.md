@@ -1,4 +1,7 @@
->**Note**: Please **fork** this Udacity repository so you have a **remote** repository in **your** GitHub account. Then you can clone the remote repository to your local machine. Later, as a part of the project, you will push your changes to the remote repository in your GitHub account.
+> **TIP**
+> Please keep updating this README file and use the following useful references: 
+- [Get-Started-GitHub-Documentation](<https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text>)
+- [Markdown Quick Reference Cheat Sheet](<https://wordpress.com/support/markdown-quick-reference/>)
 
 
 # Project Title
