@@ -3,7 +3,7 @@
 
 # Project Title
 
-Describe what your project is about and what it does
+The goal of the ***Bikeshare*** project is to use python to explore data related to bike share systems. It includes one python file and one or more **.csv** data file 
 
 ## Information about how to use your project
 
@@ -20,8 +20,8 @@ If you welcome contributions, provide guidelines on how others can contribute to
 
 ## Credits
 
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+This project is a fork of [post-your-work-project](<https://github.com/udacity/post-your-work-project>)
 
 ## Date created
 
-Include the date you created this project and README file.
+**Project Created:** January 5 , 2026
